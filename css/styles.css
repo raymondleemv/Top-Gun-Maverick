@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Asap&family=Cinzel&family=Playfair+Display&display=swap');
+/********************************************************
+ * TABLE OF CONTENTS
+ * =================
+ * 1. GENERAL
+ * 2. MAIN
+ * 2. ANIMATION
+ ********************************************************/
+
+/* 1. GENERAL */
+body {
+    background-color: #33415C;
+    padding: 16px;
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    color: white;
+    font: 16px Asap;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    border-radius: 10px;
+    padding: 16px;
+    min-height: 200px;
+}
+
+button {
+    padding: 16px;
+    border: 1px solid #979DAC;
+    border-radius: 10px;
+    background-color: transparent;
+    color: #979DAC;
+    font: 16px Asap;
+    transition: 0.3s;
+    min-width: 100px;
+}
+
+button:hover {
+    color: white;
+    border-color: white;
+}
+
+.title {
+    font: 32px Cinzel;
+    text-align: center;
+    color: white;
+}
+
+.unclickable {
+    opacity: 25%;
+    pointer-events: none;
+}
+
+/* 2. MAIN */
+main {
+    background-color: #1A273F;
+    width: 100%;
+}
+
+main > * {
+    margin-top: 16px;
+}
+
+#game-content {
+    display: grid;
+    place-items: center;
+    grid-template-columns: 100%;
+}
+
+#game-content > * {
+    grid-row: 1;
+    grid-column: 1;
+}
+
+#game-canvas {
+    height: 400px;
+    width: 100%;
+    position: relative;
+}
+
+#jet img {
+    width: 50px;
+    transform: rotate(90deg);
+}
+
+#jet {
+    position: absolute;
+    top: 0;
+}
+
+.missile {
+    content: url("../image/missile.png");
+    position: absolute;
+    width: 30px;
+    left: calc(100% - 30px);
+    transform: scaleX(-1) rotate(45deg);
+    animation: fireMissile 2s;
+}
+
+#how-to-play {
+    background-color: #33415C;
+    width: fit-content;
+    display: grid;
+    grid-row-gap: 10px;
+}
+
+#start-btn {
+    place-self: center;
+}
+
+#game-over {
+    display: grid;
+    background-color: #33415C;
+    place-items: center;
+}
+
+/* 3. ANIMATION */
+.rotate-jet {
+    animation: rotateJet 2s infinite;
+}
+
+@keyframes fireMissile {
+    100% {left: 0;}
+}
+
+@keyframes rotateJet {
+    25% {transform: rotate(90deg) rotate3d(0, 1, 0, 90deg);}
+    50% {transform: rotate(90deg) rotate3d(0, 1, 0, 180deg);}
+    75% {transform: rotate(90deg) rotate3d(0, 1, 0, 270deg);}
+    100% {transform: rotate(90deg) rotate3d(0, 1, 0, 360deg);}
+}

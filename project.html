@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <script src="js/jquery.js"></script>
+    <script src="js/project.js"></script>
+    <title>Top Gun: Maverick</title>
+</head>
+<body>
+    <!-- images used in this project: -->
+    <!-- https://www.flaticon.com/free-icon/missile_7470681?term=missile&page=1&position=54&page=1&position=54&related_id=7470681&origin=search -->
+    <!-- https://www.flaticon.com/free-icon/aircraft_6141695?term=jet&page=1&position=4&page=1&position=4&related_id=6141695&origin=search -->
+    <main class="container">
+        <h1 class="title">Top Gun: Maverick</h1>
+        <p>Score: <span class="score"></span></p>
+        <div id="game-content">
+            <div id="game-canvas">
+                <div id="jet">
+                    <img alt="This is the jet icon" src="image/jet.png">
+                </div>
+            </div>
+            <div id="how-to-play" class="container">
+                <h2 class="title">How To Play</h2>
+                <p>1. Your goal is to control the jet with arrow keys to dodge incoming missiles</p>
+                <p>2. The game will get increasingly hard with more missiles</p>
+                <p>3. Stay alive as long as you can!</p>
+                <button id="start-btn">Start</button>
+            </div>
+            <div id="game-over" class="container">
+                <h2 class="title">Game Over</h2>
+                <p>Your score is: <span class="score"></span></p>
+                <button id="play-again-btn">Play Again</button>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
